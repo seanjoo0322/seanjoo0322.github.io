@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Coins - Coin Exchange</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <a href="index.html"><h1>Coin Exchange</h1></a>
+</header>
+
+<nav id="menu" class="menu">
+    <ul>
+        <li><a href="current-coin-price.html">Current Prices</a></li>
+        <li><a href="coin-buy.html" class="active">Buy Coins</a></li>
+        <li><a href="coin-sell.html">Sell Coins</a></li>
+    </ul>
+</nav>
+
+<!-- Main Container -->
+<div class="graph-container">
+    <div class="graph-form-container">
+      <iframe class="iframe" src="graph/bitcoin.html"></iframe>
+    </div>
+    <div class="graph-form-container">
+      <iframe class="iframe" src="graph/ether.html"></iframe>
+    </div>
+</div>
+  
+
+<script src="script.js"></script>
+</body>
+</html>

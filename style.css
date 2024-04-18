@@ -1,0 +1,254 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+  color: #333;
+  font-size: 16px;
+}
+
+/* Header styles */
+header {
+  background: linear-gradient(to right, #3f0720, #6021d4);
+  color: white;
+  padding: 20px 40px;
+  text-align: center;
+  position: relative;
+}
+
+#hamburger {
+  position: absolute;
+  left: 30px;
+  top: 22px;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+header a:hover {
+  text-decoration: none;
+  color: #ffdd59;
+}
+
+/* Navigation menu styles */
+.menu ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.menu li {
+  margin: 0 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: color 0.2s ease-in-out;
+}
+
+.menu a:hover, .menu .active a {
+  color: #ffdd59;
+}
+
+/* Main container styling */
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.form-container,
+.posts-section {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 48%;
+  margin-top: 20px;
+}
+
+.coin-container {
+  flex-grow: 1; /* Take up all available space */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+}
+
+
+.coin-form h2,
+.posts-section h2 {
+  color: #6021d4;
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  border-color: #6021d4;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #6021d4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Table styling for posts */
+.posts-table, .posts-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.posts-table th, .posts-table td,
+.posts-section th, .posts-section td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.posts-table th {
+  background-color: #f8f9fa;
+}
+
+/* Responsive design considerations */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .form-container,
+  .posts-section {
+      width: 100%;
+  }
+}
+
+/* Your existing base styles remain unchanged */
+
+/* Video container adjustments */
+.video-container {
+  position: absolute;
+  top: 50px; /* Adjust this value to be the height of your header */
+  left: 0px; /* Adjust this value to be the width of your menu */
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This will cover the available space, might cut off some video */
+}
+
+/* Ensure the header and nav are positioned above the video */
+header, .menu {
+  position: relative; /* Adjust z-index if using position absolute for the video */
+  z-index: 10;
+}
+
+/* Navigation menu styles with a distinct background */
+.menu {
+  background-color: #ffffff; /* Set to a color of your choice */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+  padding: 10px 0; /* Add some padding for vertical space */
+  margin-bottom: 0; /* Align directly with the content below */
+  display: flex;
+  justify-content: center; /* Center the menu items */
+  align-items: center; /* Vertically center the menu items */
+}
+
+.menu ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically center the list items */
+  padding: 0;
+}
+
+.menu li {
+  margin: 0 15px; /* Adjust the spacing between menu items */
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333; /* Dark color for contrast */
+  font-weight: 600;
+  padding: 10px 15px; /* Add padding to menu links for a larger clickable area */
+  border-radius: 5px; /* Optional: Rounded corners for menu links */
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.menu a:hover, .menu .active a {
+  color: #6021d4; /* Highlight color for hover and active state */
+  background-color: #e3f2fd; /* Light background on hover for visibility */
+}
+
+
+.graph-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+}
+.graph-form-container {
+  box-sizing: border-box;
+  padding: 0; /* No padding */
+  margin: 20px auto; /* Center it with automatic margins only horizontally */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 48%; /* Slightly less than half to fit two side by side without wrapping */
+  height: 500px; /* Adjust height as necessary to maintain aspect ratio */
+  overflow: hidden; /* Hide overflow to prevent scrolling */
+}
+
+.iframe {
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Full height of the container */
+  border: none; /* Remove border */
+}
+
+

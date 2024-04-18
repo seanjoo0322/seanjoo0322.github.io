@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Coins - Coin Exchange</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <a href="index.html"><h1>Coin Exchange</h1></a>
+</header>
+
+<nav id="menu" class="menu">
+    <ul>
+        <li><a href="current-coin-price.html">Current Prices</a></li>
+        <li><a href="coin-buy.html" class="active">Buy Coins</a></li>
+        <li><a href="coin-sell.html">Sell Coins</a></li>
+    </ul>
+</nav>
+
+<main class="container">
+    <div class="form-container">
+        <form id="postForm" class="coin-form">  <!-- Changed form ID to match the script -->
+            <h2>Sell Your Coins</h2>
+            <div class="form-group">
+                <label for="username">Name:</label>
+                <input type="text" id="username" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="amount">Coin Count:</label>
+                <input type="number" id="amount" placeholder="Enter coin count" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Price (USD):</label>
+                <input type="text" id="price" placeholder="Enter price per coin" required>
+            </div>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+    <div class="posts-section">
+        <h2>Recent Transactions</h2>
+        <table id="posts-Table">  <!-- Changed table ID to match the script -->
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamic content will be added here -->
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
